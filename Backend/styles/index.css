@@ -1,0 +1,88 @@
+.description-field{
+    display: table-cell;
+    width:fit-content;
+}
+table{
+    width:100%;
+}
+.app{
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#description{
+    vertical-align: top;
+    margin-bottom: 20px;
+}
+#category{
+    margin-right: 20px;
+    width:100px;
+    padding:inherit;
+}
+.due_date{
+    float: right;
+}
+
+
+.table-div{
+    width:50%;
+}
+.table-count{
+    width:5%;
+}
+.table-th{
+    width:15%;
+    text-align:center;
+}
+.table-description{
+    overflow:scroll;
+    height:1rem;
+    width:50%;
+    max-width: 300px;
+    text-align:center;
+}
+.table-description::-webkit-scrollbar {
+    display: none;
+}
+th{
+    text-align:left;
+}
+body{
+    background-color:rgb(250, 250, 250)
+}
+h1{
+    margin-top: -15px;
+    margin-bottom: -5px;
+    font-size: 100px;
+    font-family:Brush Script MT, Brush Script Std, cursive;
+}
+.submit_button{
+    background-color: #4846c9;
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+.submit_button{
+    margin-top: 20px;
+    position: relative;
+    margin-left: 43%;
+}
+.submit_button:hover{
+    background-color: #2d2bbd;
+}
+.tick-image{
+    background: transparent;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+}
+.xth{
+    font-size:large;
+    color:rgb(0, 0, 0);
+}
+.yth{
+    font-weight: normal;
+}

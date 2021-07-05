@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <link rel="stylesheet" type=text/css href="../styles/index.css">
+</head>
+<body>
+    <div class='app'>
+    <div id='header-todo'><h1>Todo List</h1></div>
+    <div class='list' id='mainlist'>
+        <!-- send the data from the form to localhost:8001/add using POST method. Data read using req.body -->
+        <form action="/add" method='POST'>
+            <div class='description-field'>
+                <label class ='label-xd' for="description">Description </label>
+                <textarea name='description' id='description' autocomplete='off' rows=2 cols=36></textarea>
+            </div>
+            <label for="category">Category</label>
+            <select name="category" id="category" autocomplete='off'>
+                <option value="Personal">Personal</option>
+                <option value="Work">Work</option>
+                <option value="Family">Family</option>
+                <option value="Studies">Studies</option>
+                <option value="Other">Other</option>
+            </select>
+            <label for="due_date">Due Date: </label>
+            <input type='date' name='due_date' autocomplete='off' class='due_date'>
+            <div>
+                <label for="critical">Mark as Important: </label>
+            <input type='checkbox' name='critical' class='critical-check' value='true'>
+            </div>
+            
+            <div><button type="submit" class='submit_button'>Add Task</button></div>
+        </form>
+    </div>
+    <!-- display table -->
+    <div class=table-div>
+        <table>
+            <!-- initilaise serial number to 0 -->
+            <% count = 0 %>
+            <tr>
+                <th class='table-count xth'></th>
+                <th class='table-description xth'>Description</th>
+                <th class='table-th xth'>Category</th>
+                <th class='table-th xth'>Due Date</th>
+                <th class='table-th xth'>Done? (Delete)</th>
+            </tr>
+            <!-- read the tasks key value as passed from localhost:8001/ address while rendering from index.js file which contained the values of all the values stored in the database todo_list_db as table todos -->
+            <!-- run the loop over every field in tasks key and print them in table format -->
+            <% for(let i of tasks) { %>
+                <% count = count + 1 %>
+                <tr><th class='table-count yth <%= i._id%>'><%= count %></th>
+                    <th class='table-description yth <%= i._id%>'><%= i.description %></th>
+                    <th class='table-th yth <%= i._id%>'><%= i.category %></th>
+                    <th class='table-th yth <%= i._id%>'><%= i.due_date %></th>
+                    <th class='table-th yth <%= i._id%>'>
+                        <!-- save href of hyperlink in query format with id as one part of query. -->
+                        <!-- done button of every row has link which contains the row's id as query which can be read through our index.ejs file using req.query and we can use that id to findAndDeleteByID in the database -->
+                        <a href='/delete/?id=<%=i._id%>'><img class='tick-image' src="../Images/Tick.png" alt="Done" height=20px width=20px> </a>
+                    </th>
+                    <!-- If the iterated value of tuple has category purple then change its css as follows -->
+                    <% if (i.category=='Personal') { %> 
+                        <script>
+                            var x, len;
+                            //search element by its class name which was its id to be set to unique and retrieve the tuple
+                            var elem = document.getElementsByClassName('<%= i._id%>');
+                            //elem comtains 5 elements 0-srno of the tuple, 1-description, 2-category, 3-duedate, and 4-Delete hyperlink since they all share the same unique class name which was the tuple id.
+                            //elems[2] means we are changing the style of category column attribute. Similarly elems[1] would mean description column attribute and so on.
+                            elem[2].style.backgroundColor='darkgreen';
+                            elem[2].style.borderRadius='10px';
+                            elem[2].style.color = 'white';
+                        </script>
+                    <%}%>
+                    <% if (i.category=='Work') { %> 
+                        <script>
+                            var x, len;
+                            var elem = document.getElementsByClassName('<%= i._id%>');
+                            elem[2].style.backgroundColor='red';
+                            elem[2].style.borderRadius='10px';
+                            elem[2].style.color = 'white';
+                        </script>
+                    <%}%>
+                    <% if (i.category=='Family') { %> 
+                        <script>
+                            var x, len;
+                            var elem = document.getElementsByClassName('<%= i._id%>');
+                            elem[2].style.backgroundColor='darkblue';
+                            elem[2].style.borderRadius='10px';
+                            elem[2].style.color = 'white';
+                        </script>
+                    <%}%>
+                    <% if (i.category=='Studies') { %> 
+                        <script>
+                            var x, len;
+                            var elem = document.getElementsByClassName('<%= i._id%>');
+                            elem[2].style.backgroundColor='black';
+                            elem[2].style.borderRadius='10px';
+                            elem[2].style.color = 'white';
+                        </script>
+                    <%}%>
+                    <% if (i.category=='Other') { %> 
+                        <script>
+                            var x, len;
+                            var elem = document.getElementsByClassName('<%= i._id%>');
+                            elem[2].style.backgroundColor='rgb(90, 90, 90)'
+                            elem[2].style.borderRadius='10px';
+                            elem[2].style.color = 'white';
+                        </script>
+                    <%}%>
+                    <% if (i.critical=='true') { %> 
+                        <script>
+                            var x, len;
+                            var elem = document.getElementsByClassName('<%= i._id%>');
+                            elem[1].style.backgroundColor='#ff4e4e';
+                            elem[1].style.borderRadius='5px';
+                        </script>
+                    <%}%>
+                </tr>
+            <%}%>
+        </table>
+    </div>
+</div>
+</body>
+</html>
