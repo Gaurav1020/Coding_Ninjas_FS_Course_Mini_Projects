@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Music Player</title>
+    <link rel="stylesheet" type="text/css" href="Stylesheet_main.css">
+</head>
+
+<body>
+    <div class="player">
+        <p class="player_song_title">SONG TITLE HERE</p>
+        <button class="play_button prev_song" type="button">
+        </button>
+        <button class="play_button play_song" type="button">
+        </button>
+        <button class="play_button next_song" type="button">
+        </button>
+    </div>
+
+    <img class=singers_bg src="Resources/singers_bg.jpg">
+    <header role="banner" class="header">
+        <div class="headerlogo">
+            <img class="headerlogo" src="Resources/Music_Player_Logo.png" alt="Logo">
+        </div>
+        <div class="musicheader">
+            Music
+        </div>
+        <div class="headersearch">
+            <form>
+                <input class="headersearch_input" placeholder="Search" type="search">
+                <button class="headersearch_button" type="submit">
+                </button>
+            </form>
+        </div>
+        <div class=header_notif>
+            <button class="header_notif_img" type="button"></button>
+        </div>
+
+    </header>
+    <!--main section -->
+    <div class="main_playlist">
+        <div class="singers">
+            <h2 class="singers_heading">TOP ARTISTS OF THE WEEK</h2>
+            <div class="singer1 sd">
+                <a href="Next.html"><img class=s src="Resources/ed_sheeran.jpg" alt="Ed Sheeran"></a>
+                <div class="s1_dropdown dropdown">Ed Sheeran</div>
+            </div>
+            <div class="singer2 sd">
+                <a href="Next.html"><img class=s src="Resources/Taylor_Swift.jpg" alt="Taylor Swift"></a>
+                <div class="s2_dropdown dropdown">Taylor Swift</div>
+            </div>
+            <div class="singer3 sd">
+                <a href="Next.html"><img class=s src="Resources/Coldplay.jpg" alt="Coldplay"></a>
+                <div class="s3_dropdown dropdown">Coldplay</div>
+            </div>
+        </div>
+
+
+        <div class="genres">
+            <h2 class="Genre_heading">DISCOVER DIFFERENT GENRES</h2>
+            <div class="genre1 gd">
+                <a href="Next.html"><img class=g src="Resources/rock_genre.jpeg" alt="Rock"></a>
+                <div class="gn">Rock</div>
+            </div>
+            <div class="genre2 gd">
+                <a href="Next.html"><img class=g src="Resources/pop_genre.jpg" alt="Electro Pop"></a>
+                <div class="gn">Pop</div>
+            </div>
+            <div class="genre3 gd">
+                <a href="Next.html"><img class=g src="Resources/hiphop.jpg" alt="Hip Hop"></a>
+                <div class="gn">Hip Hop</div>
+            </div>
+            <div class="genre4 gd">
+                <a href="Next.html"><img class=g src="Resources/dubstep_genre.jpg" alt="Dubstep"></a>
+                <div class="gn">Dubstep</div>
+            </div>
+            <div class="genre5 gd">
+                <a href="Next.html"><img class=g src="Resources/punk.jpg" alt="Punk"></a>
+                <div class="gn">Punk</div>
+            </div>
+            <div class="genre6 gd">
+                <a href="Next.html"><img class=g src="Resources/classical.jpg" alt="Classical"></a>
+                <div class="gn">Classical</div>
+            </div>
+            <div class="genre7 gd">
+                <a href="Next.html"><img class=g src="Resources/Rap.jpg" alt="Rap"></a>
+                <div class="gn">Rap</div>
+            </div>
+            <div class="genre8 gd">
+                <a href="Next.html"><img class=g src="Resources/edm.jpg" alt="EDM"></a>
+                <div class="gn">EDM</div>
+            </div>
+            <div class="genre9 gd">
+                <a href="Next.html"><img class=g src="Resources/bigroom.jpg" alt="Big Room"></a>
+                <div class="gn">Big Room</div>
+            </div>
+            <div class="genre10 gd">
+                <a href="Next.html"><img class=g src="Resources/urban_music.jpg" alt="Urban Music"></a>
+                <div class="gn">Urban Music</div>
+            </div>
+        </div>
+    </div>
+    <!--Aside section -->
+    <div class="Songs_List">
+        <div class="aside_title">PLAYLIST</div>
+        <div class="aside_list">
+            <ul class="aside_ul" style="list-style-type:none">
+                <li class="aside_li">
+                    <p class="aside_songname">Song1</p>
+                    <label for="menu_options"></label>
+                    <select id="menu_options" class="aside_options">
+                        <option>Play</option>
+                        <option>Add to queue</option>
+                        <option>Save to playlist</option>
+                        <option>Download</option>
+                        <option>View Artist</option>
+                    </select>
+                </li>
+                <li class="aside_li">
+                    <p class="aside_songname">Song2</p>
+                    <label for="menu_options"></label>
+                    <select id="menu_options" class="aside_options">
+                        <option>Play</option>
+                        <option>Add to queue</option>
+                        <option>Save to playlist</option>
+                        <option>Download</option>
+                        <option>View Artist</option>
+                    </select>
+                </li>
+                <li class="aside_li">
+                    <p class="aside_songname">Song3</p>
+                    <label for="menu_options"></label>
+                    <select id="menu_options" class="aside_options">
+                        <option>Play</option>
+                        <option>Add to queue</option>
+                        <option>Save to playlist</option>
+                        <option>Download</option>
+                        <option>View Artist</option>
+                    </select>
+                </li>
+                <li class="aside_li">
+                    <p class="aside_songname">Song4</p>
+                    <label for="menu_options"></label>
+                    <select id="menu_options" class="aside_options">
+                        <option>Play</option>
+                        <option>Add to queue</option>
+                        <option>Save to playlist</option>
+                        <option>Download</option>
+                        <option>View Artist</option>
+                    </select>
+                </li>
+                <li class="aside_li">
+                    <p class="aside_songname">Song5</p>
+                    <label for="menu_options"></label>
+                    <select id="menu_options" class="aside_options">
+                        <option>Play</option>
+                        <option>Add to queue</option>
+                        <option>Save to playlist</option>
+                        <option>Download</option>
+                        <option>View Artist</option>
+                    </select>
+                </li>
+                <li class="aside_li">
+                    <p class="aside_songname">Song6</p>
+                    <label for="menu_options"></label>
+                    <select id="menu_options" class="aside_options">
+                        <option>Play</option>
+                        <option>Add to queue</option>
+                        <option>Save to playlist</option>
+                        <option>Download</option>
+                        <option>View Artist</option>
+                    </select>
+                </li>
+                <li class="aside_li">
+                    <p class="aside_songname">Song7</p>
+                    <label for="menu_options"></label>
+                    <select id="menu_options" class="aside_options">
+                        <option>Play</option>
+                        <option>Add to queue</option>
+                        <option>Save to playlist</option>
+                        <option>Download</option>
+                        <option>View Artist</option>
+                    </select>
+                </li>
+                <li class="aside_li">
+                    <p class="aside_songname">Song8</p>
+                    <label for="menu_options"></label>
+                    <select id="menu_options" class="aside_options">
+                        <option>Play</option>
+                        <option>Add to queue</option>
+                        <option>Save to playlist</option>
+                        <option>Download</option>
+                        <option>View Artist</option>
+                    </select>
+                </li>
+                <li class="aside_li">
+                    <p class="aside_songname">Song9</p>
+                    <label for="menu_options"></label>
+                    <select id="menu_options" class="aside_options">
+                        <option>Play</option>
+                        <option>Add to queue</option>
+                        <option>Save to playlist</option>
+                        <option>Download</option>
+                        <option>View Artist</option>
+                    </select>
+                </li>
+                <li class="aside_li">
+                    <p class="aside_songname">Song10</p>
+                    <label for="menu_options"></label>
+                    <select id="menu_options" class="aside_options">
+                        <option>Play</option>
+                        <option>Add to queue</option>
+                        <option>Save to playlist</option>
+                        <option>Download</option>
+                        <option>View Artist</option>
+                    </select>
+                </li>
+                <li class="aside_li">
+                    <p class="aside_songname">Song11</p>
+                    <label for="menu_options"></label>
+                    <select id="menu_options" class="aside_options">
+                        <option>Play</option>
+                        <option>Add to queue</option>
+                        <option>Save to playlist</option>
+                        <option>Download</option>
+                        <option>View Artist</option>
+                    </select>
+                </li>
+                <li class="aside_li">
+                    <p class="aside_songname">Song12</p>
+                    <label for="menu_options"></label>
+                    <select id="menu_options" class="aside_options">
+                        <option>Play</option>
+                        <option>Add to queue</option>
+                        <option>Save to playlist</option>
+                        <option>Download</option>
+                        <option>View Artist</option>
+                    </select>
+                </li>
+                <li class="aside_li">
+                    <p class="aside_songname">Song13</p>
+                    <label for="menu_options"></label>
+                    <select id="menu_options" class="aside_options">
+                        <option>Play</option>
+                        <option>Add to queue</option>
+                        <option>Save to playlist</option>
+                        <option>Download</option>
+                        <option>View Artist</option>
+                    </select>
+                </li>
+                <li class="aside_li">
+                    <p class="aside_songname">Song14</p>
+                    <label for="menu_options"></label>
+                    <select id="menu_options" class="aside_options">
+                        <option>Play</option>
+                        <option>Add to queue</option>
+                        <option>Save to playlist</option>
+                        <option>Download</option>
+                        <option>View Artist</option>
+                    </select>
+                </li>
+                <li class="aside_li">
+                    <p class="aside_songname">Song15</p>
+                    <label for="menu_options"></label>
+                    <select id="menu_options" class="aside_options">
+                        <option>Play</option>
+                        <option>Add to queue</option>
+                        <option>Save to playlist</option>
+                        <option>Download</option>
+                        <option>View Artist</option>
+                    </select>
+                </li>
+                <li class="aside_li">
+                    <p class="aside_songname">Song16</p>
+                    <label for="menu_options"></label>
+                    <select id="menu_options" class="aside_options">
+                        <option>Play</option>
+                        <option>Add to queue</option>
+                        <option>Save to playlist</option>
+                        <option>Download</option>
+                        <option>View Artist</option>
+                    </select>
+                </li>
+                <li class="aside_li">
+                    <p class="aside_songname">Song17</p>
+                    <label for="menu_options"></label>
+                    <select id="menu_options" class="aside_options">
+                        <option>Play</option>
+                        <option>Add to queue</option>
+                        <option>Save to playlist</option>
+                        <option>Download</option>
+                        <option>View Artist</option>
+                    </select>
+                </li>
+                <li class="aside_li">
+                    <p class="aside_songname">Song18</p>
+                    <label for="menu_options"></label>
+                    <select id="menu_options" class="aside_options">
+                        <option>Play</option>
+                        <option>Add to queue</option>
+                        <option>Save to playlist</option>
+                        <option>Download</option>
+                        <option>View Artist</option>
+                    </select>
+                </li>
+                <li class="aside_li">
+                    <p class="aside_songname">Song19</p>
+                    <label for="menu_options"></label>
+                    <select id="menu_options" class="aside_options">
+                        <option>Play</option>
+                        <option>Add to queue</option>
+                        <option>Save to playlist</option>
+                        <option>Download</option>
+                        <option>View Artist</option>
+                    </select>
+                </li>
+                <li class="aside_li">
+                    <p class="aside_songname">Song20</p>
+                    <label for="menu_options"></label>
+                    <select id="menu_options" class="aside_options">
+                        <option>Play</option>
+                        <option>Add to queue</option>
+                        <option>Save to playlist</option>
+                        <option>Download</option>
+                        <option>View Artist</option>
+                    </select>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+</body>
